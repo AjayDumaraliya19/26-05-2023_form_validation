@@ -11,6 +11,11 @@ function myfunction() {
         document.getElementById('message').innerHTML = ` ** User name must be atlest 3 charactor!`;
         return false;
     }
+    if (name.length > 20) {
+        document.getElementById('message').innerHTML = ` ** User name must be 20 charactor!`;
+        return false;
+    }
+
     let correct_way = /^[A-Za-z]+$/;
     //Name enter only cap letter A to Z or small letter a to z..
     if (name.match(correct_way))
